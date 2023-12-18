@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="/js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Shipment Management Form</h2><br>
+        <form id="shipmentForm" method="post">
+            <div class="form-group">
+                <span><label for="shipmentId">Shipment-No.:</label> <label id="shipmentIdMsg">
+                    </label></span>
+                <input type="text" class="form-control" name="shipmentId" id="shipmentId"
+                    placeholder="Enter Shipment ID" onchange="searchshipment()" required>
+            </div>
+            <div class="form-group">
+                <label for="shipmentDescription">Description:</label>
+                <input type="text" class="form-control" id="shipmentDescription"
+                    placeholder="Enter Shipment Description" name="shipmentDescription" disabled>
+            </div>
+            <div class="form-group">
+                <label for="shipmentSource">Source:</label>
+                <input type="text" class="form-control" id="shipmentSource" placeholder="Enter Shipment Source"
+                    name="shipmentSource" disabled>
+            </div>
+            <div class="form-group">
+                <label for="shipmentDes">Destination:</label>
+                <input type="text" class="form-control" id="shipmentDes" placeholder="Enter Shipment Destination"
+                    name="shipmentdes" disabled>
+            </div>
+            <div class="form-group">
+                <label for="shipmentDate">Shipping-Date:</label>
+                <input type="text" class="form-control" id="shipmentDate" placeholder="Enter Shipment Date"
+                    name="shipmentDate" disabled>
+            </div>
+            <div class="form-group">
+                <label for="shipmentDel">Expected-Delivery-Date:</label>
+                <input type="text" class="form-control" id="shipmentDel" placeholder="Enter Shipment Delivery Date"
+                    name="shipmentDel" disabled>
+            </div>
+            <input type="button" class="btn btn-primary" id="shipmentSave" value="Save" onclick="saveShipment()"
+                disabled>
+            <input type="button" class="btn btn-primary" id="shipmentChange" value="Update"
+                onclick="changeshipmentData()" disabled>
+            <input type="button" class="btn btn-primary" id="shipmentReset" value="Reset" onclick="resetForm()"
+                disabled>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
